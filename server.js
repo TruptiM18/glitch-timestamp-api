@@ -37,7 +37,6 @@ app.get("/api/timestamp/:date_string?", function (req, res) {
     date=new Date(intDate);
   }
   if(isNaN(Date.parse(date))){
-    console.log("came here");
     res.json({error: "Invalid Date"});
   }
   else{
